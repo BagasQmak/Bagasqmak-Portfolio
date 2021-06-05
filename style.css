@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #be3144;
+  padding: 10px 0;
+  padding-left: 200px;
+  border-bottom: 2px solid black;
+}
+
+nav h2 {
+  font-size: 32px;
+  color: whitesmoke;
+}
+
+.nav-list ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.nav-list ul li {
+  margin: 0 40px;
+  font-size: 20px;
+}
+
+.nav-list ul li a {
+  text-decoration: none;
+  color: #ddd;
+}
+
+.nav-list ul li a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+#welcome-section {
+  height: 100vh;
+  text-align: center;
+  background-color: black;
+  background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+#welcome-section h1 {
+  padding-top: 200px;
+  font-size: 4em;
+  color: #eee;
+}
+
+#welcome-section p {
+  font-size: 2em;
+  font-style: italic;
+  color: #be3144;
+}
+
+#projects {
+  background-color: rgb(78, 15, 129);
+}
+
+#projects h2 {
+  padding-top: 80px;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 3em;
+  color: white;
+  border-bottom: 2px solid #eee;
+}
+
+.project-grid {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  width: 100%;
+  max-width: 1280px;
+  grid-gap: 50px;
+}
+
+.project-tile {
+  border: 1px solid #181719;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin: 0 10px;
+}
+
+.project-tile a {
+  text-decoration: none;
+}
+
+.project-tile img {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-tile p {
+  padding: 10px 15px;
+  background-color: #181719;
+  color: #ddd;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.project-tile span {
+  color: rgb(214, 214, 10);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.project-tile:hover span {
+  opacity: 1;
+}
+
+.btn {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.btn button {
+  padding: 0.7em;
+  font-size: 1em;
+  background-color: #181719;
+  color: #eee;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn button:hover {
+  background-color: #be3144;
+}
+
+.btn i {
+  transform: translateX(0);
+  transition: 0.3s;
+}
+
+.btn button:hover i {
+  transform: translateX(5px);
+}
+
+#contact {
+  padding: 2em;
+  background-color: #181719;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact h2 {
+  font-size: 2em;
+  color: #ddd;
+  margin-bottom: 25px;
+}
+
+.sosmed {
+  display: flex;
+  flex-direction: row;
+}
+
+.sosmed .sosmed-list {
+  font-size: 1.3em;
+  margin: 0 0.7em;
+  text-shadow: 2px 2px 1px #1f1f1f;
+}
+
+.sosmed-list a {
+  text-decoration: none;
+  color: #ddd;
+  transition: transform 0.3s;
+}
+
+.sosmed-list:hover a {
+  color: #eee;
+  text-decoration: underline;
+}
+
+#contact .copyright {
+  margin: 30px 0 0 0;
+  color: whitesmoke;
+  font-size: 0.8em;
+}
+
+/* Media Query */
+@media screen and (max-width: 576px) {
+  #navbar {
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  #navbar .nav-list {
+    display: none;
+  }
+
+  #welcome-section h1 {
+    padding-top: 300px;
+    font-size: 2.5em;
+  }
+
+  #welcome-section p {
+    font-size: 1.3em;
+  }
+
+  #projects h2 {
+    font-size: 2em;
+  }
+
+  .project-grid {
+    row-gap: 20px;
+  }
+
+  #contact h2 {
+    font-size: 1.7em;
+  }
+
+  .sosmed {
+    flex-direction: column;
+  }
+
+  .sosmed .sosmed-list {
+    font-size: 1.2em;
+    padding-bottom: 10px;
+  }
+}
