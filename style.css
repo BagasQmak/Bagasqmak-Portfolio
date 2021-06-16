@@ -25,6 +25,7 @@ nav {
   padding: 10px 0;
   padding-left: 200px;
   border-bottom: 2px solid black;
+  z-index: 9999;
 }
 
 nav h2 {
